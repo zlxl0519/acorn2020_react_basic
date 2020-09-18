@@ -49,6 +49,7 @@ class App extends Component {
         {/* 다른 Component(자식 component) 를 포함 시킬수 있다. */}
         <MyComponent title="컴포넌트1" num={1000}/>
         <MyComponent title="컴포넌트2" num={2000}/>
+        <MyComponent/>
       </div>
     );
   }

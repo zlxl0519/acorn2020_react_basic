@@ -8,6 +8,8 @@ import propTypes from 'prop-types';
     수정은 불가하고 읽기 전용이다.
 */
 class MyComponent extends Component {
+    //static defaultProps, static propTypes, state 는 약속 된것이다.(이 형태로만 쓸수 있음)
+
     //properties 의 default 값 정의하기
     //반드시 static을 붙이고 defaultProps 에 object 를 넣어준다.
     static defaultProps={
@@ -27,6 +29,7 @@ class MyComponent extends Component {
     render() {
         return (
             <div>
+                {/* this.props. propties 명 */}
                <h2>{this.props.title}</h2> 
                 <p> 전달된 num - 100={this.props.num -100}</p>
                 <button onClick={()=>{
@@ -39,7 +42,7 @@ class MyComponent extends Component {
                 }}>
                     눌러봐
                 </button>
-                {/* 상태값 출력하기 */}
+                {/* 상태값 출력하기 this.state.상태값 명 */}
                 <p>{this.state.count}</p>
             </div>
         );

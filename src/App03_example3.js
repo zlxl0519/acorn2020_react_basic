@@ -1,22 +1,30 @@
 import React, { Component } from 'react';
 import MsgList from './sub/MsgList';
 
-class App03_example2 extends Component {
+class App03_example3 extends Component {
     //입력한 메세지 목록을 상태값으로 관리
     state={
-        id:0,
         list:[]
     }
+    //아이디를 count 할 필드
+    id=0;
+    //메세지 데이터를 담을 필드
+    msgList=[];
     //추가 버튼을 눌렀을때 호출되는 함수
     addClicked=()=>{
         //1. 입력한 문자열을 읽어온다.
         const msg=this.inputMsg.value;
-        //2. this.state.list 에 반영한다.
-        //this.state.list.push((<li>{msg}</li>));
-        //기존의 list 에 새로운 아이템을 추가해서 새로운 배열을 얻어낸다.
-        this.setState({id: this.state.id +1});
-        const newList=this.state.list.concat((<li key={this.state.id}>{msg}</li>));
-        //3.setState() 를 호출해서 UI 가 업데이트 되도록 한다.
+        //아이디를 얻어내서 배열에 추가
+        this.id++;
+        this.msgList.push({
+            id:this.id,
+            msg:msg
+        });
+        const newList=this.msgList.map((item)=>{
+            return(
+                <li key={item.id}>{item.msg}</li>
+            );
+        });
         this.setState({list:newList});
         //4. 입력창 초기화
         this.inputMsg.value="";
@@ -36,4 +44,4 @@ class App03_example2 extends Component {
     }
 }
 
-export default App03_example2;
+export default App03_example3;

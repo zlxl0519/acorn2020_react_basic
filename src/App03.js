@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 class App03 extends Component {
     render() {
-        //JSX 의 목록 //JSX 형식대로 () 안에 마크업을 작성하면 된다. //이것을 출력하면 알아서 반복문 돌면서 마크업적용되서 출력해준다.
+        //JSX 의 목록 //JSX 형식대로 () 안에 마크업을 작성하면 된다. 
+        //이것을 출력하면 알아서 반복문 돌면서 마크업적용되서 출력해준다.
         const jsx_names=[(<li key={0}>김구라</li>), (<li key={1}>해골</li>), (<li key={2}>원숭이</li>)];
         
         const names=["김구라", "해골", "원숭이"];

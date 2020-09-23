@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MemberList from './sub/MemberList';
+import InputComponent from './sub/InputComponent';
 
 class App03_example4 extends Component {
 
@@ -10,11 +11,7 @@ class App03_example4 extends Component {
     }
 
     //추가 버튼을 눌렀을때 호출되는 함수(메소드)
-    addClicked=()=>{
-        //입력한 이름
-        const name=this.inputName.value;
-        //입력한 주소
-        const addr=this.inputAddr.value;
+    addClicked=(name, addr)=>{
         //회원의 번호
         const num=this.state.num+1;
         this.setState({num: num});
@@ -37,9 +34,7 @@ class App03_example4 extends Component {
 
         return (
             <div>
-                <input ref={(ref)=>{this.inputName=ref;}} type="text" placeholder="이름 입력..."/>
-                <input ref={(ref)=>{this.inputAddr=ref;}} type="text" placeholder="주소 입력..."/>
-                <button onClick={this.addClicked}>추가</button>
+                <InputComponent addClicked={this.addClicked}/>
                 <h1>회원 목록입니다.</h1>
                 <MemberList memberList={this.state.memberList}
                     deleteClicked={this.deleteClicked}/>

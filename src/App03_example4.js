@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import MemberList from './sub/MemberList';
 import InputComponent from './sub/InputComponent';
+//app 전역에서 사용할수 있는 css 로딩 
+import './css/bootstrap.css';
 
 class App03_example4 extends Component {
 
@@ -33,7 +35,7 @@ class App03_example4 extends Component {
     render() {
 
         return (
-            <div>
+            <div className="container">
                 <InputComponent addClicked={this.addClicked}/>
                 <h1>회원 목록입니다.</h1>
                 <MemberList memberList={this.state.memberList}

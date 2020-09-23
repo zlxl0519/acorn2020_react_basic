@@ -7,7 +7,7 @@ class InputComponent extends Component {
             <Fragment>
                 <input ref={(ref)=>{this.inputName=ref;}} type="text" placeholder="이름 입력..."/>
                 <input ref={(ref)=>{this.inputAddr=ref;}} type="text" placeholder="주소 입력..."/>
-                <button onClick={()=>{
+                <button className="btn btn-primary" onClick={()=>{
                     //입력한 이름과 주소를 얻어와서 
                     const name=this.inputName.value;
                     const addr=this.inputAddr.value;

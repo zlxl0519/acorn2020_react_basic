@@ -46,6 +46,7 @@ class App03_practice extends Component {
                 <input type="text" placeholder="주소입력"
                     ref={(addr)=>{this.inputAddr=addr}}/>
                 <button onClick={this.addClick}>추가</button>
+                <h1>회원 목록 입니다.</h1>
                 <TableComponent memberList={this.state.memberList}
                     deleteClick={this.deleteClick}/>
             </div>

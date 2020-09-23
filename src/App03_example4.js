@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MemberList from './sub/MemberList';
 
 class App03_example4 extends Component {
 
@@ -59,7 +60,7 @@ class App03_example4 extends Component {
                 <input ref={(ref)=>{this.inputAddr=ref;}} type="text" placeholder="주소 입력..."/>
                 <button onClick={this.addClicked}>추가</button>
                 <h1>회원 목록입니다.</h1>
-                <table>
+                {/* <table>
                     <thead>
                         <tr>
                             <th>번호</th>
@@ -71,7 +72,9 @@ class App03_example4 extends Component {
                     <tbody>
                         {jsx_memberList}
                     </tbody>
-                </table>
+                </table> */}
+                <MemberList memberList={this.state.memberList}
+                    deleteClicked={this.deleteClicked}/>
             </div>
         );
     }

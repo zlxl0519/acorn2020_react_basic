@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MemberList from './sub/MemberList';
 
 class App03_example4 extends Component {
 
@@ -33,40 +34,15 @@ class App03_example4 extends Component {
     }
 
     render() {
-        const jsx_memberList=this.state.memberList.map(
-            (item)=>{
-                return (
-                    <tr key={item.num}>
-                        <td>{item.num}</td>
-                        <td>{item.name}</td>
-                        <td>{item.addr}</td>
-                        <td><button onClick={()=>{
-                            //함수 호출하면서 삭제할 번호를 전달한다.
-                            this.deleteClicked(item.num);
-                        }}>삭제</button></td>
-                    </tr>
-                );
-            }
-        );
+
         return (
             <div>
                 <input ref={(ref)=>{this.inputName=ref;}} type="text" placeholder="이름 입력..."/>
                 <input ref={(ref)=>{this.inputAddr=ref;}} type="text" placeholder="주소 입력..."/>
                 <button onClick={this.addClicked}>추가</button>
                 <h1>회원 목록입니다.</h1>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>번호</th>
-                            <th>이름</th>
-                            <th>주소</th>
-                            <th>삭제</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {jsx_memberList}
-                    </tbody>
-                </table>
+                <MemberList memberList={this.state.memberList}
+                    deleteClicked={this.deleteClicked}/>
             </div>
         );
     }

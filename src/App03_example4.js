@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import MemberList from './sub/MemberList';
 import InputComponent from './sub/InputComponent';
+//app 전역에서 사용할수 있는 css로딩
+import './css/bootstrap.css';
+//import styles from './css/bootstrap.module.css';
+// 이 컴포넌트 파일에서만 사용할수 있도록 css 를 만든것 
+//.module.css 라고 하면 이 컴포넌트에서밖에 사용하지 못한다.
+//console.log(styles);
 
 class App03_example4 extends Component {
 
@@ -56,7 +62,7 @@ class App03_example4 extends Component {
             }
         );
         return (
-            <div>
+            <div className="container">
                 {/* <input ref={(ref)=>{this.inputName=ref;}} type="text" placeholder="이름 입력..."/>
                 <input ref={(ref)=>{this.inputAddr=ref;}} type="text" placeholder="주소 입력..."/>
                 <button onClick={this.addClicked}>추가</button> */}

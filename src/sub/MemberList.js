@@ -23,7 +23,7 @@ class MemberList extends Component {
             }
         );
         return (
-            <table>
+            <table className="table">
                 <thead>
                     <tr>
                         <th>번호</th>

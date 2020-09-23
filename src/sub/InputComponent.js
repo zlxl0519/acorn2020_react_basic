@@ -7,7 +7,7 @@ class InputComponent extends Component {
             <Fragment>
                <input ref={(ref)=>{this.inputName=ref}} type="text" placeholder="이름 입력..."/>
                 <input ref={(ref)=>{this.inputAddr=ref}} type="text" placeholder="주소 입력..."/>
-                <button onClick={()=>{
+                <button className="btn btn-primary" onClick={()=>{
                     const name=this.inputName.value;
                     const addr=this.inputAddr.value;
                     //부모 컴포넌트에 전달

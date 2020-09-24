@@ -9,3 +9,8 @@
 .hide{
     display:none;
 }
+
+.transition-effect{
+    transition: transform 0.4s ease-out;
+    cursor: pointer;
+}

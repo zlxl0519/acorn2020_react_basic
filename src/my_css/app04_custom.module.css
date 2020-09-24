@@ -5,3 +5,12 @@
     background-color: yellow;
     border: 1px solid red;
 }
+
+.hide{
+    display: none;
+}
+
+.transition-effect{
+    transition: transform 0.4s ease-out; 
+    cursor: pointer;
+}

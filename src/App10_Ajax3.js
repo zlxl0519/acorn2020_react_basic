@@ -8,6 +8,7 @@ class App10_Ajax3 extends Component{
     };
     //해당 컴포넌트가 활성화 되었을때 호출되는 메소드(함수)
     //해당 컴포넌트가 활성회 되었을때 사용되도록 안에 작성할수 있다.
+    //컴포넌트가 고착이 되었을때 사용하는것
     componentDidMount=()=>{
         console.log("App10_Ajax3 컴포넌트가 마운트되었습니다.");
 
